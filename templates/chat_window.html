@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Window</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat_window.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <button class="back-btn">返回</button>
+            <span class="title">MINI GT</span>
+            <button class="options-btn">關閉</button>
+        </div>
+        <div class="chat-content" id="chat-content">
+            <!-- 這裡會動態新增訊息 -->
+        </div>
+        <div class="input-bar">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button class="send-btn" onclick="sendMessage()">發送</button>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='chat_window.js') }}"></script>
+</body>
+</html>
+
+
